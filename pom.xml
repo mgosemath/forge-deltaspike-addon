@@ -19,8 +19,14 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<version.furnace>2.0.0.Final</version.furnace>
+		<version.furnace>2.5.0.Final</version.furnace>
+		<maven.required.version>3.1</maven.required.version>
+		<javase.required.version>1.7</javase.required.version>
 	</properties>
+	
+		<prerequisites>
+		<maven>${maven.required.version}</maven>
+	</prerequisites>
 
 	<dependencyManagement>
 		<dependencies>
@@ -157,8 +163,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>${javase.required.version}</source>
+					<target>${javase.required.version}</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
